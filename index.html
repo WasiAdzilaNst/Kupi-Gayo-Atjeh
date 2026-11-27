@@ -1,0 +1,2282 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kupi Gayo Atjeh - Toko online & katalog B2C/B2B biji kopi spesialti dataran tinggi Tanoh Gayo, Aceh Tengah & Bener Meriah.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- Cadangan Kebijakan Keamanan Konten (CSP) untuk hosting statis -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <title>Kupi Gayo Atjeh | Kopi Spesialti Dataran Tinggi Aceh</title>
+
+  <!-- Tipografi Elegan: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- =====================================================================
+       [FILE: style.css] - Sistem Desain Mandiri Kupi Gayo Atjeh
+       ===================================================================== -->
+  <style>
+    :root {
+      --bg-cream: #FAF6F0;
+      --bg-cream-alt: #F2EBE0;
+      --bg-card: #FFFFFF;
+      --coffee-dark: #3E2723;
+      --coffee-mid: #5D4037;
+      --coffee-light: #8D6E63;
+      --gold-accent: #D4AF37;
+      --gold-hover: #B89322;
+      --gold-soft: rgba(212, 175, 55, 0.16);
+      --text-main: #2A1B18;
+      --text-muted: #6D5B55;
+      --border-subtle: rgba(62, 39, 35, 0.12);
+      --success-bg: #1B5E20;
+      --danger-bg: #B71C1C;
+      --radius-sm: 0.5rem;
+      --radius-md: 0.875rem;
+      --radius-lg: 1.25rem;
+      --radius-xl: 1.75rem;
+      --shadow-sm: 0 2px 8px rgba(62, 39, 35, 0.06);
+      --shadow-md: 0 10px 25px -5px rgba(62, 39, 35, 0.1);
+      --shadow-lg: 0 20px 40px -10px rgba(62, 39, 35, 0.18);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: var(--font-serif);
+      color: var(--coffee-dark);
+      line-height: 1.22;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Promo Bar */
+    .promo-strip {
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      text-align: center;
+      font-size: 0.8125rem;
+      padding: 0.55rem 1rem;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .promo-strip strong {
+      color: var(--gold-accent);
+      font-weight: 700;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background-color: rgba(250, 246, 240, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: box-shadow 0.25s ease;
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.5rem;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-icon {
+      width: 2.65rem;
+      height: 2.65rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--coffee-dark), var(--coffee-mid));
+      border: 1.5px solid var(--gold-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-accent);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--coffee-dark);
+      display: block;
+    }
+
+    .brand-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--coffee-light);
+      display: block;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--coffee-mid);
+      padding: 0.5rem 0.25rem;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--coffee-dark);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--gold-accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .cart-trigger {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      padding: 0.65rem 1.05rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      min-height: 44px;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cart-trigger:hover {
+      background-color: var(--coffee-mid);
+      transform: translateY(-1px);
+    }
+
+    .cart-badge {
+      background-color: var(--gold-accent);
+      color: var(--coffee-dark);
+      font-weight: 800;
+      font-size: 0.75rem;
+      min-width: 1.35rem;
+      height: 1.35rem;
+      padding: 0 0.35rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      color: var(--coffee-dark);
+      background-color: var(--bg-card);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 0.75rem 1.25rem 1.25rem;
+      background-color: var(--bg-cream);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      padding: 0.75rem 0.5rem;
+      font-weight: 600;
+      color: var(--coffee-dark);
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 3rem 0 4rem;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(212, 175, 55, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 12% 85%, rgba(62, 39, 35, 0.08) 0%, transparent 45%),
+        var(--bg-cream);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3.5rem;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--gold-soft);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      color: var(--coffee-dark);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.15rem, 4.5vw, 3.45rem);
+      font-weight: 800;
+      margin-bottom: 1.15rem;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-title span {
+      color: #9A7712;
+      font-style: italic;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 58ch;
+      margin-bottom: 1.85rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      padding: 0.9rem 1.65rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      min-height: 48px;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--coffee-mid);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      background-color: var(--gold-accent);
+      color: var(--coffee-dark);
+      padding: 0.9rem 1.55rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      min-height: 48px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-gold:hover {
+      background-color: var(--gold-hover);
+      color: #FFFFFF;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--coffee-dark);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Hero Showcase Card */
+    .hero-card {
+      background: linear-gradient(155deg, #3E2723 0%, #261613 100%);
+      color: var(--bg-cream);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(212, 175, 55, 0.45);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-card-tag {
+      display: inline-block;
+      background-color: var(--gold-accent);
+      color: var(--coffee-dark);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-visual-box {
+      background: rgba(250, 246, 240, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-card h3 {
+      color: var(--bg-cream);
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card p {
+      color: rgba(250, 246, 240, 0.82);
+      font-size: 0.9rem;
+    }
+
+    .promo-code-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px dashed var(--gold-accent);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .promo-code-text {
+      font-family: monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold-accent);
+      letter-spacing: 0.08em;
+    }
+
+    .btn-copy-promo {
+      background-color: var(--gold-accent);
+      color: var(--coffee-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      min-height: 36px;
+    }
+
+    /* Section Header */
+    .section {
+      padding: 4.5rem 0;
+    }
+
+    .section-alt {
+      background-color: var(--bg-cream-alt);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      color: #9A7712;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Story Section */
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .story-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .story-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.85rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .story-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: var(--radius-md);
+      background-color: var(--gold-soft);
+      color: var(--coffee-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.15rem;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .story-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .story-card p {
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+    }
+
+    /* Catalog Controls */
+    .catalog-controls {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 900px) {
+      .catalog-controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--coffee-mid);
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      min-height: 40px;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--coffee-dark);
+      color: var(--coffee-dark);
+    }
+
+    .filter-btn.active {
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      border-color: var(--coffee-dark);
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+    }
+
+    @media (min-width: 900px) {
+      .search-box {
+        width: 310px;
+      }
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.5rem;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--border-subtle);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      min-height: 44px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-accent);
+      background-color: #FFFFFF;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--coffee-light);
+      pointer-events: none;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .product-banner {
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #3E2723 0%, #5D4037 100%);
+      color: var(--bg-cream);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 165px;
+    }
+
+    .product-badges {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge-roast {
+      background-color: rgba(250, 246, 240, 0.16);
+      color: var(--bg-cream);
+      border: 1px solid rgba(250, 246, 240, 0.25);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .badge-grade {
+      background-color: var(--gold-accent);
+      color: var(--coffee-dark);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .product-origin {
+      font-size: 0.78rem;
+      color: var(--gold-accent);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .product-body {
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 0.75rem;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .product-notes {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background-color: var(--bg-cream);
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--gold-accent);
+    }
+
+    .product-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .option-select {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      min-height: 40px;
+    }
+
+    .product-footer {
+      margin-top: auto;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .price-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .price-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--coffee-dark);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .btn-detail {
+      padding: 0.55rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      color: var(--coffee-dark);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      min-height: 42px;
+      background-color: var(--bg-cream);
+    }
+
+    .btn-detail:hover {
+      background-color: var(--bg-cream-alt);
+    }
+
+    .btn-add-cart {
+      padding: 0.55rem 0.95rem;
+      border-radius: var(--radius-sm);
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      min-height: 42px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-add-cart:hover {
+      background-color: var(--gold-hover);
+      color: #FFFFFF;
+    }
+
+    /* B2B Banner */
+    .b2b-box {
+      background: linear-gradient(135deg, var(--coffee-dark) 0%, #241512 100%);
+      color: var(--bg-cream);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      border: 1.5px solid var(--gold-accent);
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 820px) {
+      .b2b-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .b2b-box h3 {
+      color: var(--gold-accent);
+      font-size: 1.65rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .b2b-box p {
+      color: rgba(250, 246, 240, 0.85);
+      max-width: 58ch;
+      font-size: 0.95rem;
+    }
+
+    /* Slide-over Cart Drawer & Modal */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(26, 15, 13, 0.62);
+      backdrop-filter: blur(3px);
+      z-index: 50;
+      display: none;
+    }
+
+    .overlay.open {
+      display: block;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 440px;
+      background-color: var(--bg-cream);
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      padding: 1.25rem 1.5rem;
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-header h3 {
+      color: var(--bg-cream);
+      font-size: 1.25rem;
+    }
+
+    .btn-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.12);
+      color: var(--bg-cream);
+      font-size: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .drawer-body {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cart-item {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .cart-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .cart-item-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--coffee-dark);
+    }
+
+    .cart-item-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .cart-item-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .qty-controls {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 0.2rem;
+    }
+
+    .qty-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background-color: var(--bg-card);
+      color: var(--coffee-dark);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-remove {
+      color: var(--danger-bg);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .checkout-form {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--coffee-dark);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background-color: var(--bg-cream);
+      font-size: 0.875rem;
+      min-height: 40px;
+    }
+
+    .promo-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .drawer-footer {
+      padding: 1.25rem 1.5rem;
+      background-color: var(--bg-card);
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--coffee-dark);
+      padding-top: 0.5rem;
+      border-top: 1px dashed var(--border-subtle);
+    }
+
+    .btn-wa {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background-color: #1E7E34;
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 0.95rem 1.25rem;
+      border-radius: var(--radius-md);
+      min-height: 48px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-wa:hover {
+      background-color: #166327;
+    }
+
+    /* Product Detail Modal */
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.95);
+      width: calc(100% - 2rem);
+      max-width: 540px;
+      background-color: var(--bg-card);
+      border-radius: var(--radius-xl);
+      z-index: 70;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-lg);
+      border: 1.5px solid var(--gold-accent);
+      display: none;
+    }
+
+    .modal.open {
+      display: block;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-close {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background-color: var(--bg-cream);
+      color: var(--coffee-dark);
+      font-weight: 700;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin: 1.15rem 0;
+      background-color: var(--bg-cream);
+      padding: 1rem;
+      border-radius: var(--radius-md);
+    }
+
+    .spec-item span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .spec-item strong {
+      font-size: 0.875rem;
+      color: var(--coffee-dark);
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 80;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: calc(100% - 2rem);
+      max-width: 400px;
+      pointer-events: none;
+    }
+
+    .toast {
+      background-color: var(--coffee-dark);
+      color: var(--bg-cream);
+      border-left: 4px solid var(--gold-accent);
+      padding: 0.85rem 1.15rem;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      animation: slideUp 0.25s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--coffee-dark);
+      color: rgba(250, 246, 240, 0.85);
+      padding: 3.5rem 0 2rem;
+      border-top: 3px solid var(--gold-accent);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+    }
+
+    .footer h4 {
+      color: var(--gold-accent);
+      font-size: 1.1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-list a:hover {
+      color: var(--gold-accent);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(250, 246, 240, 0.14);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: rgba(250, 246, 240, 0.65);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--text-muted);
+      background-color: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px dashed var(--border-subtle);
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Promo Banner Atas -->
+  <div class="promo-strip">
+    Panen Raya Dataran Tinggi Takengon &bull; Gunakan kode <strong>ATJEH10</strong> untuk diskon 10% semua varian biji kopi!
+  </div>
+
+  <!-- Navigasi Utama -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#beranda" class="brand" aria-label="Beranda Kupi Gayo Atjeh">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+            <line x1="6" y1="2" x2="6" y2="4"/>
+            <line x1="10" y1="2" x2="10" y2="4"/>
+            <line x1="14" y1="2" x2="14" y2="4"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-title">Kupi Gayo Atjeh</span>
+          <span class="brand-sub">Specialty Coffee Roasters</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="#beranda" class="nav-link">Beranda</a>
+        <a href="#cerita" class="nav-link">Cerita Gayo</a>
+        <a href="#katalog" class="nav-link">Katalog Kopi</a>
+        <a href="#kemitraan" class="nav-link">Kemitraan Kafe</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="openCartBtn" class="cart-trigger" aria-label="Buka Keranjang Belanja">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span>Keranjang</span>
+          <span id="cartCountBadge" class="cart-badge">0</span>
+        </button>
+
+        <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Navigasi Mobile">
+      <a href="#beranda">Beranda</a>
+      <a href="#cerita">Cerita Kopi Gayo</a>
+      <a href="#katalog">Katalog Biji Kopi</a>
+      <a href="#kemitraan">Pasokan Kafe &amp; B2B</a>
+      <a href="#kontak">Hubungi Kami</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge">
+            <span>&#9733;</span> 100% Single Origin Arabika &bull; 1.400 &ndash; 1.700 MDPL
+          </div>
+          <h1 class="hero-title">
+            Cita Rasa Autentik dari Tanah Tinggi <span>Tanoh Gayo, Aceh</span>
+          </h1>
+          <p class="hero-desc">
+            Dipetik merah oleh petani lokal di lereng Pegunungan Bukit Barisan, Takengon &amp; Bener Meriah. Disangrai presisi setiap pekan untuk penikmat kopi rumahan maupun kebutuhan roastery dan kafe di seluruh Indonesia.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#katalog" class="btn-primary">Jelajahi Katalog Kopi</a>
+            <a href="#cerita" class="btn-gold">Pelajari Proses Pascapanen</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <span class="stat-num">86.5+</span>
+              <span class="stat-label">Skor Cupping SCA</span>
+            </div>
+            <div>
+              <span class="stat-num">1.600m</span>
+              <span class="stat-label">Ketinggian Kebun</span>
+            </div>
+            <div>
+              <span class="stat-num">Fresh</span>
+              <span class="stat-label">Sangrai Tiap Minggu</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Promo Spesial Panen Raya">
+          <span class="hero-card-tag">Edisi Terbatas Panen Raya</span>
+          <div class="hero-visual-box">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <circle cx="32" cy="32" r="30" fill="rgba(212,175,55,0.15)" stroke="#D4AF37" stroke-width="2"/>
+              <path d="M24 18C18 24 18 40 24 46C30 40 30 24 24 18Z" fill="#D4AF37"/>
+              <path d="M40 18C34 24 34 40 40 46C46 40 46 24 40 18Z" fill="#FAF6F0"/>
+            </svg>
+            <h3 style="margin-top:0.85rem;">Gayo Wine &amp; Honey Reserve</h3>
+            <p>Fermentasi anaerobik terkendali dengan aroma buah tropis, nangka matang, cokelat hitam, dan aftertaste manis panjang.</p>
+          </div>
+          <p>Dapatkan potongan harga langsung 10% untuk pembelian pertama kemasan 250g, 500g, maupun 1kg.</p>
+          <div class="promo-code-box">
+            <div>
+              <span style="font-size:0.72rem; display:block; color:rgba(250,246,240,0.7);">KODE VOUCHER:</span>
+              <span class="promo-code-text" id="promoCodeValue">ATJEH10</span>
+            </div>
+            <button type="button" id="copyPromoBtn" class="btn-copy-promo">Salin Kode</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Cerita Kopi Gayo -->
+    <section id="cerita" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Warisan Agraris Aceh</span>
+          <h2 class="section-title">Dari Kabut Danau Lut Tawar ke Cangkir Anda</h2>
+          <p class="section-subtitle">
+            Tanah vulkanik subur dan mikroklimat sejuk di Kabupaten Aceh Tengah serta Bener Meriah melahirkan karakter kopi bertubuh tebal (heavy body) dengan keasaman lembut yang seimbang.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <div class="story-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+              </svg>
+            </div>
+            <h3>Terroir Dataran Tinggi</h3>
+            <p>
+              Varietas unggul seperti Timtim, Ateng Super, dan Bourbon ditanam di bawah naungan pohon lamtoro pada ketinggian 1.400&ndash;1.700 mdpl, memperlambat pematangan ceri sehingga gula alami terkonsentrasi sempurna.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+              </svg>
+            </div>
+            <h3>Giling Basah &amp; Fermentasi Modern</h3>
+            <p>
+              Selain proses tradisional khas Sumatera (Semi-Washed / Giling Basah) yang menghasilkan aroma rempah dan earthy elegan, kami juga mengolah varian Natural, Honey, dan Wine Process berstandar spesialti.
+            </p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3>Roasting Presisi &amp; Higienis</h3>
+            <p>
+              Setiap batch disangrai menggunakan mesin drum modern dengan kurva temperatur terukur, disortir manual (hand-picked defect free), dan dikemas dalam kantong katup satu arah (one-way valve).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Katalog Produk Interaktif -->
+    <section id="katalog" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Koleksi Biji Pilihan</span>
+          <h2 class="section-title">Katalog Kopi Spesialti Gayo</h2>
+          <p class="section-subtitle">
+            Pilih profil sangrai, ukuran kemasan, dan jenis gilingan sesuai metode seduh favorit atau standar kalibrasi mesin espresso kafe Anda.
+          </p>
+        </div>
+
+        <!-- Filter & Pencarian -->
+        <div class="catalog-controls" role="region" aria-label="Filter dan Pencarian Katalog">
+          <div class="filter-pills" id="roastFilterGroup">
+            <button type="button" class="filter-btn active" data-roast="Semua">Semua Sangrai</button>
+            <button type="button" class="filter-btn" data-roast="Light">Light Roast</button>
+            <button type="button" class="filter-btn" data-roast="Medium">Medium Roast</button>
+            <button type="button" class="filter-btn" data-roast="Medium-Dark">Medium-Dark</button>
+            <button type="button" class="filter-btn" data-roast="Dark">Dark Roast</button>
+          </div>
+
+          <div class="search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="searchInput" class="search-input" placeholder="Cari varian, proses, atau notes..." aria-label="Cari produk kopi">
+          </div>
+        </div>
+
+        <!-- Grid Kartu Produk (Diisi secara aman via JS) -->
+        <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Kemitraan B2B Kafe -->
+    <section id="kemitraan" class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="b2b-box">
+          <div>
+            <span class="hero-card-tag">Program Kemitraan Kafe &amp; Roastery</span>
+            <h3>Pasokan Biji Kopi Rutin untuk Bisnis Kafe Anda</h3>
+            <p>
+              Dapatkan harga grosir khusus mulai pemesanan 5 kg/bulan, konsultasi kalibrasi resep house blend, serta sampel gratis untuk pemilik kedai kopi dan hotel di seluruh Nusantara.
+            </p>
+          </div>
+          <div style="flex-shrink:0;">
+            <button type="button" id="b2bConsultBtn" class="btn-gold">Konsultasi Sampel B2B via WA</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="kontak" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Kupi Gayo Atjeh</h4>
+          <p style="font-size:0.9rem; max-width:40ch; margin-bottom:1rem;">
+            Menghadirkan kemurnian cita rasa kopi spesialti dataran tinggi Aceh langsung dari kebun petani mitra di Takengon dan Bener Meriah ke seluruh Indonesia.
+          </p>
+          <p style="font-size:0.85rem; color:var(--gold-accent);">
+            Jl. Sengeda No. 42, Takengon, Kab. Aceh Tengah, Aceh 24511
+          </p>
+        </div>
+
+        <div>
+          <h4>Navigasi Cepat</h4>
+          <ul class="footer-list">
+            <li><a href="#beranda">Beranda Utama</a></li>
+            <li><a href="#cerita">Cerita &amp; Proses Pascapanen</a></li>
+            <li><a href="#katalog">Katalog Biji Kopi</a></li>
+            <li><a href="#kemitraan">Kemitraan B2B &amp; Kafe</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Layanan Pelanggan</h4>
+          <ul class="footer-list">
+            <li>Senin &ndash; Sabtu: 08.00 &ndash; 21.00 WIB</li>
+            <li>Pengiriman: JNE, J&amp;T, SiCepat &amp; Kargo Udara</li>
+            <li>WhatsApp Roastery: +62 812-6900-4511</li>
+            <li>Email: salam@kupigayoatjeh.id</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="currentYear"></span> Kupi Gayo Atjeh. Hak Cipta Dilindungi.</span>
+        <span>100% Kopi Arabika Indikasi Geografis Gayo</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Overlay Global -->
+  <div id="globalOverlay" class="overlay" aria-hidden="true"></div>
+
+  <!-- Slide-Over Keranjang Belanja -->
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Keranjang Belanja" aria-hidden="true">
+    <div class="drawer-header">
+      <h3>Keranjang Belanja</h3>
+      <button type="button" id="closeCartBtn" class="btn-close" aria-label="Tutup Keranjang">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="cartItemsContainer"></div>
+
+      <div class="checkout-form">
+        <h4 style="font-size:0.95rem;">Kode Voucher &amp; Pengiriman</h4>
+        <div>
+          <label for="promoInput" class="form-label">Kode Promo (Coba: ATJEH10)</label>
+          <div class="promo-row">
+            <input type="text" id="promoInput" class="form-input" placeholder="Masukkan kode promo" maxlength="20">
+            <button type="button" id="applyPromoBtn" class="btn-add-cart" style="white-space:nowrap;">Pakai</button>
+          </div>
+        </div>
+
+        <div>
+          <label for="customerName" class="form-label">Nama Lengkap Penerima *</label>
+          <input type="text" id="customerName" class="form-input" placeholder="Contoh: Teuku Rizky / Kopi Senja Cafe" maxlength="80" required>
+        </div>
+
+        <div>
+          <label for="customerCity" class="form-label">Kota &amp; Alamat Pengiriman *</label>
+          <textarea id="customerCity" class="form-input" rows="2" placeholder="Contoh: Jl. Sudirman No. 12, Jakarta Selatan" maxlength="220" required></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="summary-row">
+        <span>Subtotal Produk</span>
+        <span id="subtotalText">Rp 0</span>
+      </div>
+      <div class="summary-row" id="discountRow" style="display:none; color:#1B5E20; font-weight:600;">
+        <span>Diskon Promo (10%)</span>
+        <span id="discountText">- Rp 0</span>
+      </div>
+      <div class="summary-total">
+        <span>Total Estimasi</span>
+        <span id="totalText">Rp 0</span>
+      </div>
+      <button type="button" id="checkoutWaBtn" class="btn-wa">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        <span>Pesan Langsung via WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Modal Detail Produk -->
+  <div id="productModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-header">
+      <div>
+        <span id="modalBadge" class="badge-grade" style="display:inline-block; margin-bottom:0.4rem;"></span>
+        <h3 id="modalTitle" style="font-size:1.45rem;"></h3>
+      </div>
+      <button type="button" id="closeModalBtn" class="modal-close" aria-label="Tutup Detail">&times;</button>
+    </div>
+    <p id="modalDesc" style="font-size:0.9375rem; color:var(--text-muted);"></p>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <span>Asal Kebun</span>
+        <strong id="modalOrigin"></strong>
+      </div>
+      <div class="spec-item">
+        <span>Proses Pascapanen</span>
+        <strong id="modalProcess"></strong>
+      </div>
+      <div class="spec-item">
+        <span>Profil Sangrai</span>
+        <strong id="modalRoast"></strong>
+      </div>
+      <div class="spec-item">
+        <span>Catatan Rasa (Notes)</span>
+        <strong id="modalNotes"></strong>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-top:1.25rem;">
+      <div>
+        <span class="price-label">Mulai Kemasan 250g</span>
+        <span id="modalPrice" class="price-value"></span>
+      </div>
+      <button type="button" id="modalAddBtn" class="btn-primary">Tambah ke Keranjang</button>
+    </div>
+  </div>
+
+  <!-- Wadah Notifikasi Toast -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- =====================================================================
+       [FILE: app.js] - Logika Aplikasi & Keamanan DOM (Strict textContent)
+       ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Nomor WhatsApp tujuan pemesanan (format internasional tanpa tanda +)
+      const WA_NUMBER = '6281269004511';
+      const STORAGE_KEY = 'kupi_gayo_atjeh_cart_v1';
+
+      // Data Katalog Kopi Spesialti Gayo
+      const PRODUCTS = [
+        {
+          id: 'gayo-specialty',
+          name: 'Gayo Arabica Specialty Grade 1',
+          origin: 'Pegasing, Aceh Tengah (1.550 MDPL)',
+          process: 'Semi-Washed (Giling Basah)',
+          roast: 'Medium',
+          grade: 'SCA 86.5',
+          notes: 'Dark Chocolate, Brown Sugar, Sweet Herbal, Low Acidity',
+          basePrice: 85000,
+          description: 'Klasik terbaik dari dataran tinggi Takengon. Diproses dengan metode tradisional Giling Basah khas Aceh yang menghasilkan kekentalan (body) penuh dan aroma rempah manis yang menenangkan.'
+        },
+        {
+          id: 'gayo-wine',
+          name: 'Gayo Wine Process Reserve',
+          origin: 'Bener Meriah (1.650 MDPL)',
+          process: 'Anaerobic Natural Wine',
+          roast: 'Light',
+          grade: 'Micro-Lot 88.0',
+          notes: 'Fermented Berry, Jackfruit, Red Grape, Syrupy Finish',
+          basePrice: 125000,
+          description: 'Ceri merah matang difermentasi secara anaerobik selama 21 hari sebelum dijemur perlahan. Menghasilkan kompleksitas aroma buah tropis dan sensasi wine yang eksotis untuk seduh manual V60.'
+        },
+        {
+          id: 'gayo-peaberry',
+          name: 'Gayo Peaberry (Kopi Lanang)',
+          origin: 'Lut Tawar, Aceh Tengah (1.500 MDPL)',
+          process: 'Full Washed',
+          roast: 'Medium',
+          grade: 'Single Bean',
+          notes: 'Caramel, Roasted Almond, Mandarin Orange, Clean Cup',
+          basePrice: 105000,
+          description: 'Biji tunggal langka yang hanya muncul sekitar 5% dari total panen. Bentuknya yang bulat memungkinkan distribusi panas sangrai merata dengan kepadatan kafein dan rasa manis yang intens.'
+        },
+        {
+          id: 'gayo-honey',
+          name: 'Gayo Red Honey Process',
+          origin: 'Bandar, Bener Meriah (1.600 MDPL)',
+          process: 'Red Honey',
+          roast: 'Light',
+          grade: 'SCA 87.25',
+          notes: 'Wild Honey, Peach, Floral Jasmine, Silky Body',
+          basePrice: 110000,
+          description: 'Dikupas kulit luarnya dengan mempertahankan lapisan lendir (mucilage) alami saat penjemuran di atas para-para. Memberikan rasa manis madu hutan yang lembut dan kejernihan rasa floral.'
+        },
+        {
+          id: 'gayo-luwak',
+          name: 'Gayo Wild Luwak Arabica',
+          origin: 'Hutan Lindung Pantan Cuaca (1.700 MDPL)',
+          process: 'Wild Civet Natural',
+          roast: 'Medium-Dark',
+          grade: 'Authentic Wild',
+          notes: 'Velvety Cocoa, Vanilla Bean, Hazelnut, Zero Bitterness',
+          basePrice: 245000,
+          description: 'Dikumpulkan secara etis dari luwak liar di sekitar perkebunan organik Gayo. Enzim alami memecah protein biji kopi sehingga menciptakan tekstur sehalus sutra tanpa rasa pahit berlebih.'
+        },
+        {
+          id: 'gayo-espresso-b2b',
+          name: 'Atjeh Crema Espresso Blend (B2B)',
+          origin: 'Takengon & Bener Meriah Blend',
+          process: 'Natural & Semi-Washed',
+          roast: 'Dark',
+          grade: 'Cafe Calibration',
+          notes: 'Thick Golden Crema, Bittersweet Cocoa, Roasted Hazelnut',
+          basePrice: 78000,
+          description: 'Diracik khusus untuk mesin espresso komersial, es kopi susu kekinian, dan kebutuhan kedai kopi. Menghasilkan krema tebal keemasan yang tetap dominan saat dipadukan dengan susu segar.'
+        }
+      ];
+
+      // Pengali harga berdasarkan gramasi kemasan
+      const WEIGHT_MULTIPLIERS = {
+        '250g': 1,
+        '500g': 1.9,
+        '1kg': 3.6
+      };
+
+      // State Aplikasi
+      let state = {
+        selectedRoast: 'Semua',
+        searchQuery: '',
+        cart: [],
+        promoApplied: false,
+        activeModalProductId: null
+      };
+
+      // Utilitas Keamanan: Sanitasi Teks Input
+      function sanitizeText(str, maxLen) {
+        if (typeof str !== 'string') return '';
+        return str.replace(/[<>]/g, '').trim().slice(0, maxLen);
+      }
+
+      // Format Rupiah Indonesia
+      function formatRupiah(amount) {
+        return 'Rp ' + Math.round(amount).toLocaleString('id-ID');
+      }
+
+      // Notifikasi Toast Non-Blocking
+      function showToast(message) {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        container.appendChild(toast);
+
+        setTimeout(function () {
+          toast.style.opacity = '0';
+          toast.style.transition = 'opacity 0.25s ease';
+          setTimeout(function () {
+            if (toast.parentNode) {
+              toast.parentNode.removeChild(toast);
+            }
+          }, 260);
+        }, 2800);
+      }
+
+      // Penyimpanan LocalStorage Aman
+      function loadCartFromStorage() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return;
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            state.cart = parsed.filter(function (item) {
+              return (
+                item &&
+                typeof item.productId === 'string' &&
+                PRODUCTS.some(function (p) { return p.id === item.productId; }) &&
+                ['250g', '500g', '1kg'].includes(item.weight) &&
+                ['Biji Utuh', 'Bubuk Halus', 'Bubuk Kasar'].includes(item.grind) &&
+                Number.isInteger(item.qty) &&
+                item.qty > 0 &&
+                item.qty <= 99
+              );
+            });
+          }
+        } catch (err) {
+          state.cart = [];
+        }
+      }
+
+      function saveCartToStorage() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state.cart));
+        } catch (err) {
+          // Abaikan jika mode private browsing membatasi kuota
+        }
+      }
+
+      // Hitung Harga Satuan Berdasarkan Produk & Gramasi
+      function getUnitPrice(product, weight) {
+        const mult = WEIGHT_MULTIPLIERS[weight] || 1;
+        return Math.round((product.basePrice * mult) / 1000) * 1000;
+      }
+
+      // Render Katalog Produk (100% DOM API + textContent, Bebas innerHTML)
+      function renderCatalog() {
+        const grid = document.getElementById('productGrid');
+        while (grid.firstChild) {
+          grid.removeChild(grid.firstChild);
+        }
+
+        const query = state.searchQuery.toLowerCase();
+        const filtered = PRODUCTS.filter(function (product) {
+          const matchRoast = state.selectedRoast === 'Semua' || product.roast === state.selectedRoast;
+          const matchQuery =
+            !query ||
+            product.name.toLowerCase().includes(query) ||
+            product.notes.toLowerCase().includes(query) ||
+            product.process.toLowerCase().includes(query) ||
+            product.origin.toLowerCase().includes(query);
+          return matchRoast && matchQuery;
+        });
+
+        if (filtered.length === 0) {
+          const empty = document.createElement('div');
+          empty.className = 'empty-state';
+          const title = document.createElement('h3');
+          title.textContent = 'Varian kopi tidak ditemukan';
+          const desc = document.createElement('p');
+          desc.textContent = 'Coba ubah kata kunci pencarian atau pilih filter tingkat sangrai lainnya.';
+          empty.appendChild(title);
+          empty.appendChild(desc);
+          grid.appendChild(empty);
+          return;
+        }
+
+        filtered.forEach(function (product) {
+          const card = document.createElement('article');
+          card.className = 'product-card';
+
+          // Banner Atas Kartu
+          const banner = document.createElement('div');
+          banner.className = 'product-banner';
+
+          const badges = document.createElement('div');
+          badges.className = 'product-badges';
+
+          const roastBadge = document.createElement('span');
+          roastBadge.className = 'badge-roast';
+          roastBadge.textContent = product.roast + ' Roast';
+
+          const gradeBadge = document.createElement('span');
+          gradeBadge.className = 'badge-grade';
+          gradeBadge.textContent = product.grade;
+
+          badges.appendChild(roastBadge);
+          badges.appendChild(gradeBadge);
+
+          const originEl = document.createElement('span');
+          originEl.className = 'product-origin';
+          originEl.textContent = product.origin;
+
+          banner.appendChild(badges);
+          banner.appendChild(originEl);
+
+          // Isi Kartu
+          const body = document.createElement('div');
+          body.className = 'product-body';
+
+          const titleEl = document.createElement('h3');
+          titleEl.className = 'product-title';
+          titleEl.textContent = product.name;
+
+          const notesEl = document.createElement('div');
+          notesEl.className = 'product-notes';
+          notesEl.textContent = 'Notes: ' + product.notes;
+
+          // Pilihan Gramasi & Gilingan
+          const optionsDiv = document.createElement('div');
+          optionsDiv.className = 'product-options';
+
+          const weightSelect = document.createElement('select');
+          weightSelect.className = 'option-select';
+          weightSelect.setAttribute('aria-label', 'Pilih Berat ' + product.name);
+          ['250g', '500g', '1kg'].forEach(function (w) {
+            const opt = document.createElement('option');
+            opt.value = w;
+            opt.textContent = 'Kemasan ' + w;
+            weightSelect.appendChild(opt);
+          });
+
+          const grindSelect = document.createElement('select');
+          grindSelect.className = 'option-select';
+          grindSelect.setAttribute('aria-label', 'Pilih Gilingan ' + product.name);
+          ['Biji Utuh', 'Bubuk Halus', 'Bubuk Kasar'].forEach(function (g) {
+            const opt = document.createElement('option');
+            opt.value = g;
+            opt.textContent = g;
+            grindSelect.appendChild(opt);
+          });
+
+          optionsDiv.appendChild(weightSelect);
+          optionsDiv.appendChild(grindSelect);
+
+          // Footer Harga & Tombol
+          const footer = document.createElement('div');
+          footer.className = 'product-footer';
+
+          const priceWrap = document.createElement('div');
+          const priceLabel = document.createElement('span');
+          priceLabel.className = 'price-label';
+          priceLabel.textContent = 'Harga';
+
+          const priceVal = document.createElement('span');
+          priceVal.className = 'price-value';
+          priceVal.textContent = formatRupiah(getUnitPrice(product, '250g'));
+
+          priceWrap.appendChild(priceLabel);
+          priceWrap.appendChild(priceVal);
+
+          weightSelect.addEventListener('change', function () {
+            priceVal.textContent = formatRupiah(getUnitPrice(product, weightSelect.value));
+          });
+
+          const actionsWrap = document.createElement('div');
+          actionsWrap.className = 'card-actions';
+
+          const detailBtn = document.createElement('button');
+          detailBtn.type = 'button';
+          detailBtn.className = 'btn-detail';
+          detailBtn.textContent = 'Detail';
+          detailBtn.addEventListener('click', function () {
+            openProductModal(product.id);
+          });
+
+          const addBtn = document.createElement('button');
+          addBtn.type = 'button';
+          addBtn.className = 'btn-add-cart';
+          addBtn.textContent = '+ Keranjang';
+          addBtn.addEventListener('click', function () {
+            addToCart(product.id, weightSelect.value, grindSelect.value);
+          });
+
+          actionsWrap.appendChild(detailBtn);
+          actionsWrap.appendChild(addBtn);
+
+          footer.appendChild(priceWrap);
+          footer.appendChild(actionsWrap);
+
+          body.appendChild(titleEl);
+          body.appendChild(notesEl);
+          body.appendChild(optionsDiv);
+          body.appendChild(footer);
+
+          card.appendChild(banner);
+          card.appendChild(body);
+          grid.appendChild(card);
+        });
+      }
+
+      // Tambah Item ke Keranjang
+      function addToCart(productId, weight, grind) {
+        const product = PRODUCTS.find(function (p) { return p.id === productId; });
+        if (!product) return;
+
+        const existingIndex = state.cart.findIndex(function (item) {
+          return item.productId === productId && item.weight === weight && item.grind === grind;
+        });
+
+        if (existingIndex > -1) {
+          if (state.cart[existingIndex].qty < 99) {
+            state.cart[existingIndex].qty += 1;
+          }
+        } else {
+          state.cart.push({
+            productId: productId,
+            weight: weight,
+            grind: grind,
+            qty: 1
+          });
+        }
+
+        saveCartToStorage();
+        renderCart();
+        showToast(product.name + ' (' + weight + ') ditambahkan ke keranjang.');
+      }
+
+      // Ubah Kuantitas Item
+      function updateCartQty(index, delta) {
+        if (!state.cart[index]) return;
+        const newQty = state.cart[index].qty + delta;
+        if (newQty <= 0) {
+          state.cart.splice(index, 1);
+        } else if (newQty <= 99) {
+          state.cart[index].qty = newQty;
+        }
+        saveCartToStorage();
+        renderCart();
+      }
+
+      // Render Keranjang Belanja
+      function renderCart() {
+        const container = document.getElementById('cartItemsContainer');
+        const badge = document.getElementById('cartCountBadge');
+        const subtotalEl = document.getElementById('subtotalText');
+        const discountRow = document.getElementById('discountRow');
+        const discountEl = document.getElementById('discountText');
+        const totalEl = document.getElementById('totalText');
+
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+
+        let totalItems = 0;
+        let subtotal = 0;
+
+        if (state.cart.length === 0) {
+          const emptyMsg = document.createElement('div');
+          emptyMsg.className = 'empty-state';
+          emptyMsg.textContent = 'Keranjang belanja Anda masih kosong. Pilih biji kopi Gayo favorit Anda di katalog.';
+          container.appendChild(emptyMsg);
+        } else {
+          state.cart.forEach(function (item, idx) {
+            const product = PRODUCTS.find(function (p) { return p.id === item.productId; });
+            if (!product) return;
+
+            const unitPrice = getUnitPrice(product, item.weight);
+            const lineTotal = unitPrice * item.qty;
+            totalItems += item.qty;
+            subtotal += lineTotal;
+
+            const itemCard = document.createElement('div');
+            itemCard.className = 'cart-item';
+
+            const topRow = document.createElement('div');
+            topRow.className = 'cart-item-top';
+
+            const infoDiv = document.createElement('div');
+            const nameEl = document.createElement('div');
+            nameEl.className = 'cart-item-name';
+            nameEl.textContent = product.name;
+
+            const metaEl = document.createElement('div');
+            metaEl.className = 'cart-item-meta';
+            metaEl.textContent = item.weight + ' • ' + item.grind + ' (' + formatRupiah(unitPrice) + ')';
+
+            infoDiv.appendChild(nameEl);
+            infoDiv.appendChild(metaEl);
+
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'btn-remove';
+            removeBtn.textContent = 'Hapus';
+            removeBtn.addEventListener('click', function () {
+              updateCartQty(idx, -item.qty);
+            });
+
+            topRow.appendChild(infoDiv);
+            topRow.appendChild(removeBtn);
+
+            const bottomRow = document.createElement('div');
+            bottomRow.className = 'cart-item-bottom';
+
+            const qtyWrap = document.createElement('div');
+            qtyWrap.className = 'qty-controls';
+
+            const minusBtn = document.createElement('button');
+            minusBtn.type = 'button';
+            minusBtn.className = 'qty-btn';
+            minusBtn.textContent = '-';
+            minusBtn.setAttribute('aria-label', 'Kurangi jumlah');
+            minusBtn.addEventListener('click', function () {
+              updateCartQty(idx, -1);
+            });
+
+            const qtyText = document.createElement('span');
+            qtyText.style.fontWeight = '700';
+            qtyText.style.minWidth = '1.5rem';
+            qtyText.style.textAlign = 'center';
+            qtyText.textContent = String(item.qty);
+
+            const plusBtn = document.createElement('button');
+            plusBtn.type = 'button';
+            plusBtn.className = 'qty-btn';
+            plusBtn.textContent = '+';
+            plusBtn.setAttribute('aria-label', 'Tambah jumlah');
+            plusBtn.addEventListener('click', function () {
+              updateCartQty(idx, 1);
+            });
+
+            qtyWrap.appendChild(minusBtn);
+            qtyWrap.appendChild(qtyText);
+            qtyWrap.appendChild(plusBtn);
+
+            const lineTotalEl = document.createElement('strong');
+            lineTotalEl.style.color = 'var(--coffee-dark)';
+            lineTotalEl.textContent = formatRupiah(lineTotal);
+
+            bottomRow.appendChild(qtyWrap);
+            bottomRow.appendChild(lineTotalEl);
+
+            itemCard.appendChild(topRow);
+            itemCard.appendChild(bottomRow);
+            container.appendChild(itemCard);
+          });
+        }
+
+        const discount = state.promoApplied && subtotal > 0 ? Math.round(subtotal * 0.1) : 0;
+        const grandTotal = subtotal - discount;
+
+        badge.textContent = String(totalItems);
+        subtotalEl.textContent = formatRupiah(subtotal);
+
+        if (discount > 0) {
+          discountRow.style.display = 'flex';
+          discountEl.textContent = '- ' + formatRupiah(discount);
+        } else {
+          discountRow.style.display = 'none';
+        }
+
+        totalEl.textContent = formatRupiah(grandTotal);
+      }
+
+      // Kontrol Drawer & Modal
+      function openCartDrawer() {
+        document.getElementById('globalOverlay').classList.add('open');
+        const drawer = document.getElementById('cartDrawer');
+        drawer.classList.add('open');
+        drawer.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeAllOverlays() {
+        document.getElementById('globalOverlay').classList.remove('open');
+        const drawer = document.getElementById('cartDrawer');
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+
+        const modal = document.getElementById('productModal');
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        state.activeModalProductId = null;
+      }
+
+      function openProductModal(productId) {
+        const product = PRODUCTS.find(function (p) { return p.id === productId; });
+        if (!product) return;
+
+        state.activeModalProductId = product.id;
+        document.getElementById('modalBadge').textContent = product.grade;
+        document.getElementById('modalTitle').textContent = product.name;
+        document.getElementById('modalDesc').textContent = product.description;
+        document.getElementById('modalOrigin').textContent = product.origin;
+        document.getElementById('modalProcess').textContent = product.process;
+        document.getElementById('modalRoast').textContent = product.roast + ' Roast';
+        document.getElementById('modalNotes').textContent = product.notes;
+        document.getElementById('modalPrice').textContent = formatRupiah(product.basePrice);
+
+        document.getElementById('globalOverlay').classList.add('open');
+        const modal = document.getElementById('productModal');
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+
+      // Checkout via WhatsApp
+      function handleWhatsAppCheckout() {
+        if (state.cart.length === 0) {
+          showToast('Keranjang masih kosong. Silakan pilih produk terlebih dahulu.');
+          return;
+        }
+
+        const nameInput = document.getElementById('customerName');
+        const cityInput = document.getElementById('customerCity');
+        const customerName = sanitizeText(nameInput.value, 80);
+        const customerCity = sanitizeText(cityInput.value, 220);
+
+        if (customerName.length < 2) {
+          showToast('Mohon isi Nama Lengkap Penerima.');
+          nameInput.focus();
+          return;
+        }
+
+        if (customerCity.length < 5) {
+          showToast('Mohon isi Kota & Alamat Pengiriman dengan lengkap.');
+          cityInput.focus();
+          return;
+        }
+
+        let subtotal = 0;
+        const lines = [
+          'Halo *Kupi Gayo Atjeh*, saya ingin memesan biji kopi spesialti berikut:',
+          ''
+        ];
+
+        state.cart.forEach(function (item, idx) {
+          const product = PRODUCTS.find(function (p) { return p.id === item.productId; });
+          if (!product) return;
+          const unitPrice = getUnitPrice(product, item.weight);
+          const lineTotal = unitPrice * item.qty;
+          subtotal += lineTotal;
+          lines.push(
+            (idx + 1) + '. *' + product.name + '* (' + item.weight + ' - ' + item.grind + ') x ' + item.qty + ' = ' + formatRupiah(lineTotal)
+          );
+        });
+
+        const discount = state.promoApplied ? Math.round(subtotal * 0.1) : 0;
+        const total = subtotal - discount;
+
+        lines.push('');
+        lines.push('Subtotal: ' + formatRupiah(subtotal));
+        if (discount > 0) {
+          lines.push('Diskon Voucher (ATJEH10): -' + formatRupiah(discount));
+        }
+        lines.push('*Total Estimasi: ' + formatRupiah(total) + '*');
+        lines.push('');
+        lines.push('*Data Pengiriman:*');
+        lines.push('Nama: ' + customerName);
+        lines.push('Alamat: ' + customerCity);
+        lines.push('');
+        lines.push('Mohon informasi ongkos kirim & nomor rekening pembayaran. Terima kasih!');
+
+        const encodedText = encodeURIComponent(lines.join('\n'));
+        const waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + encodedText;
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+      }
+
+      // Inisialisasi Event Listeners saat DOM siap
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('currentYear').textContent = String(new Date().getFullYear());
+
+        loadCartFromStorage();
+        renderCatalog();
+        renderCart();
+
+        // Filter Roast Level
+        const filterBtns = document.querySelectorAll('#roastFilterGroup .filter-btn');
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            filterBtns.forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            state.selectedRoast = btn.getAttribute('data-roast') || 'Semua';
+            renderCatalog();
+          });
+        });
+
+        // Pencarian Real-time
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', function () {
+          state.searchQuery = sanitizeText(searchInput.value, 60);
+          renderCatalog();
+        });
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        mobileMenuBtn.addEventListener('click', function () {
+          const isOpen = mobileNav.classList.toggle('open');
+          mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        mobileNav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            mobileNav.classList.remove('open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        // Salin Kode Promo
+        document.getElementById('copyPromoBtn').addEventListener('click', function () {
+          const code = 'ATJEH10';
+          const tempInput = document.createElement('input');
+          tempInput.value = code;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          try {
+            document.execCommand('copy');
+            showToast('Kode promo ATJEH10 berhasil disalin!');
+          } catch (err) {
+            showToast('Gunakan kode promo: ATJEH10');
+          }
+          document.body.removeChild(tempInput);
+        });
+
+        // Terapkan Kode Promo di Keranjang
+        document.getElementById('applyPromoBtn').addEventListener('click', function () {
+          const promoVal = sanitizeText(document.getElementById('promoInput').value, 20).toUpperCase();
+          if (promoVal === 'ATJEH10') {
+            state.promoApplied = true;
+            renderCart();
+            showToast('Voucher ATJEH10 aktif! Diskon 10% diterapkan.');
+          } else {
+            state.promoApplied = false;
+            renderCart();
+            showToast('Kode voucher tidak valid. Gunakan kode ATJEH10.');
+          }
+        });
+
+        // Drawer & Modal Events
+        document.getElementById('openCartBtn').addEventListener('click', openCartDrawer);
+        document.getElementById('closeCartBtn').addEventListener('click', closeAllOverlays);
+        document.getElementById('closeModalBtn').addEventListener('click', closeAllOverlays);
+        document.getElementById('globalOverlay').addEventListener('click', closeAllOverlays);
+
+        document.getElementById('modalAddBtn').addEventListener('click', function () {
+          if (state.activeModalProductId) {
+            addToCart(state.activeModalProductId, '250g', 'Biji Utuh');
+            closeAllOverlays();
+          }
+        });
+
+        // Tombol Checkout WhatsApp
+        document.getElementById('checkoutWaBtn').addEventListener('click', handleWhatsAppCheckout);
+
+        // Tombol Konsultasi B2B
+        document.getElementById('b2bConsultBtn').addEventListener('click', function () {
+          const msg = encodeURIComponent('Halo Kupi Gayo Atjeh, saya pemilik kafe/roastery tertarik konsultasi pasokan biji kopi B2B & permintaan sampel.');
+          window.open('https://wa.me/' + WA_NUMBER + '?text=' + msg, '_blank', 'noopener,noreferrer');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
